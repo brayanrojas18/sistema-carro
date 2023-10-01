@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.productName %></title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.productDescription %>">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova) { %>, viewport-fit=cover<% } %>">
+
+    <link rel="icon" href="statics/quasar-logo.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="statics/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="statics/icons/favicon-16x16.png">
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+      
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCHAMI8IhX_bpI9SiToHXGxpAmFpQln3NQ",
+        authDomain: "sistema-carro-cd48d.firebaseapp.com",
+        databaseURL: "https://sistema-carro-cd48d.firebaseio.com",
+        projectId: "sistema-carro-cd48d",
+        storageBucket: "sistema-carro-cd48d.appspot.com",
+        messagingSenderId: "794783713396"
+      };
+      firebase.initializeApp(config);
+
+      /*firebase.initializeApp({
+      apiKey: 'AIzaSyCHAMI8IhX_bpI9SiToHXGxpAmFpQln3NQ',
+      authDomain: 'sistema-carro-cd48d.firebaseapp.com',
+      projectId: 'sistema-carro-cd48d'
+      });*/
+
+      // Initialize Cloud Firestore through Firebase
+      var db = firebase.firestore();
+
+      // Get a reference to the storage service, which is used to create references in your storage bucket
+      var storage = firebase.storage();
+
+
+
+
+      
+    </script>
+
+  </head>
+  <body>
+    <!-- DO NOT touch the following DIV -->
+    <div id="q-app"></div>
+  </body>
+</html>
